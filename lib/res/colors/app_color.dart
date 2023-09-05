@@ -17,7 +17,8 @@ class AppColor{
   static Color redColor = Color(0xffFC3F5B);
 
   static const Color primaryTextColor = Color(0xff000000);
-  static Color secondaryTextColor = Color(0xff444648);
+  static Color textBgColor = Color(0xff1A535C);
+  static Color imageBgColor = Color(0xff11481F);
 
 
 }

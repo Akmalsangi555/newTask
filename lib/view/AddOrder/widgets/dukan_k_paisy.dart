@@ -14,7 +14,7 @@ class InputShopWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: Get.height* 0.01),
+      padding: EdgeInsets.symmetric(vertical: Get.height* 0.005),
       child: Column(
         children: [
           Row(

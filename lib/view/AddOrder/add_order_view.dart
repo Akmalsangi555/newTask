@@ -3,6 +3,7 @@ import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
 import '../../res/colors/app_color.dart';
 import '../../res/components/button_widget.dart';
+import '../../res/routes/routes_name.dart';
 import 'widgets/customCheckBox.dart';
 import 'widgets/dropDownItems.dart';
 import 'widgets/dukan_k_paisy.dart';
@@ -68,14 +69,17 @@ class _AddOrderViewState extends State<AddOrderView> {
 
                     textWidget('سامان', 36, AppColor.textColorLight),
 
-                    ButtonWidget(title: 'سامان داخل کریں',
+                     ButtonWidget(title: 'سامان داخل کریں',
                         width: 220,
                         buttonColor: AppColor.whiteColor,
                         textColor: AppColor.bgColor,
                         textSize: 28,
-                        // textColor: Colors.black,
-                        onPressed: () {}
-                        ),
+                        onPressed: () {
+                          print('clicked');
+                          Get.toNamed(RouteName.addOrderScreen2);
+                        }
+                    ),
+
                     SizedBox(height: Get.height* 0.01),
 
                     Row(
@@ -129,7 +133,8 @@ class _AddOrderViewState extends State<AddOrderView> {
                           ),
                         ),
                         SizedBox(width: 70),
-                      ], //<Widget>[]
+
+                      ],
                     ),
                     SizedBox(height: Get.height* 0.01),
 

@@ -26,7 +26,7 @@ class InputShopWidget extends StatelessWidget {
                     textWidget('گاڑی کی قسم', 36, AppColor.textColorLight),
                     SizedBox(height: MediaQuery.of(context).size.height * 0.005),
                     Obx(() => Container(
-                      height: Get.height* 0.06,
+                      height: Get.height* 0.055,
                       width: Get.width,
                       decoration: BoxDecoration(
                           color: AppColor.textColorLight,
@@ -60,7 +60,7 @@ class InputShopWidget extends StatelessWidget {
                     textWidget(' دکان کے پیسے', 36, AppColor.textColorLight),
                     SizedBox(height: MediaQuery.of(context).size.height * 0.005),
                     Container(
-                      height: Get.height* 0.06,
+                      height: Get.height* 0.055,
                       decoration: BoxDecoration(
                           color: AppColor.textColorLight,
                           borderRadius: BorderRadius.circular(05)
@@ -87,7 +87,7 @@ class InputShopWidget extends StatelessWidget {
             children: [
               Expanded(
                 child: Obx(() => Container(
-                  height: Get.height* 0.06,
+                  height: Get.height* 0.055,
                   width: Get.width,
                   decoration: BoxDecoration(
                       color: AppColor.textColorLight,
@@ -118,7 +118,7 @@ class InputShopWidget extends StatelessWidget {
               SizedBox(width: Get.width* 0.05),
               Expanded(
                 child: Obx(() => Container(
-                  height: Get.height* 0.06,
+                  height: Get.height* 0.055,
                   width: Get.width,
                   decoration: BoxDecoration(
                       color: AppColor.textColorLight,
@@ -131,7 +131,7 @@ class InputShopWidget extends StatelessWidget {
                           child: Icon(Icons.arrow_drop_down_sharp, size: 50, color: AppColor.bgColor,)),
                       value: controller.selectedItem.value,
                       onChanged: (newValue) {
-                        controller.selectedItem.value = newValue!;
+                        // controller.selectedItem.value = newValue!;
                       },
                       items: controller.items.map((item) => DropdownMenuItem(
                         value: item,

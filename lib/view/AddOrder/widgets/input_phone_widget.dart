@@ -13,10 +13,11 @@ class InputPhoneWidget extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: Get.height* 0.01),
       child: Row(
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
             child: Container(
-              height: Get.height* 0.06,
+              height: Get.height* 0.055,
               decoration: BoxDecoration(
                 color: AppColor.textFillColor,
                 borderRadius: BorderRadius.circular(05)
@@ -32,7 +33,8 @@ class InputPhoneWidget extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: 30),
+          // SizedBox(width: 30),
+          SizedBox(width: Get.width* 0.115),
           textWidget('فون نمبر', 36, AppColor.textColorLight),
         ],
       ),

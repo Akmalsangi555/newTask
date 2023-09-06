@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../../res/colors/app_color.dart';
 import '../../res/components/button_widget.dart';
 import '../../res/routes/routes_name.dart';
+import '../../view_model/controllers/toggle_controller.dart';
 import 'widgets/customCheckBox.dart';
 import 'widgets/dropDownItems.dart';
 import 'widgets/dukan_k_paisy.dart';
@@ -25,17 +26,7 @@ class _AddOrderViewState extends State<AddOrderView> {
   IconData currentIcon = Icons.star; // Initial icon
   Color currentColor = Colors.yellow; // Initial color
 
-  void toggleIconAndColor() {
-    setState(() {
-      if (currentIcon == Icons.star) {
-        currentIcon = Icons.favorite; // Change the icon
-        currentColor = Colors.red; // Change the color
-      } else {
-        currentIcon = Icons.star; // Change the icon back to the original
-        currentColor = AppColor.bgColor; // Change the color back to the original
-      }
-    });
-  }
+  final ToggleController toggleController = Get.put(ToggleController());
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +44,7 @@ class _AddOrderViewState extends State<AddOrderView> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         textWidget('حسن گلاس', 40, AppColor.textColorLight),
-                        textWidget('0000', 40, AppColor.textColorLight),
+                        textWidget('0000', 30, AppColor.textColorLight),
                         textWidget('عمیر اقبال', 40, AppColor.textColorLight),
 
                       ],
@@ -64,7 +55,6 @@ class _AddOrderViewState extends State<AddOrderView> {
                     InputPhoneWidget(),
                     DropdownWidget(),
                     toggleWidget(),
-
                     InputShopWidget(),
 
                     textWidget('سامان', 36, AppColor.textColorLight),
@@ -84,38 +74,13 @@ class _AddOrderViewState extends State<AddOrderView> {
 
                     Row(
                       children: <Widget>[
-                        // Container(
-                        //   height: Get.height* 0.06,
-                        //   width: Get.width* 0.1,
-                        //   child: Theme(
-                        //     data: ThemeData(unselectedWidgetColor: AppColor.textColorLight),
-                        //     child: Container(
-                        //       height: Get.height* 0.06,
-                        //       width: Get.width* 0.1,
-                        //       child: Padding(
-                        //         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                        //         child: Checkbox(
-                        //           // materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                        //           activeColor: AppColor.whiteColor,
-                        //           checkColor: AppColor.bgColor,
-                        //           value: checkBoxValue,
-                        //           onChanged: (bool? value) {
-                        //             setState(() {
-                        //               checkBoxValue = value!;
-                        //             });
-                        //           },
-                        //         ),
-                        //       ),
-                        //     ),
-                        //   ),
-                        // ),
                         CustomCheckbox(),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.only(left: Get.width* 0.05, right: Get.width* 0.01),
+                            padding: EdgeInsets.only(left: Get.width* 0.08, right: Get.width* 0.18),
                             child: Container(
                               // width: Get.width* 0.5,
-                              height: Get.height* 0.06,
+                              height: Get.height* 0.055,
                               decoration: BoxDecoration(
                                   color: AppColor.textFillColor,
                                   borderRadius: BorderRadius.circular(05)
@@ -132,13 +97,14 @@ class _AddOrderViewState extends State<AddOrderView> {
                             ),
                           ),
                         ),
-                        SizedBox(width: 70),
+                        // Container(),
+                        // SizedBox(width: 70),
 
                       ],
                     ),
                     SizedBox(height: Get.height* 0.01),
 
-                    addedItemsText('سامان , فریج ۔ اےسی ۔ ٹیبل, کرسی', 26, AppColor.whiteColor),
+                    addedItemsText('سامان , فریج ۔ اےسی ۔ ٹیبل  \n  کرسی 4', 26, AppColor.whiteColor),
                     SizedBox(height: Get.height* 0.01),
 
                     ButtonWidget(title: 'آرڈر درج کریں',
@@ -167,6 +133,7 @@ class _AddOrderViewState extends State<AddOrderView> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         FlutterSwitch(
+          // duration: Duration(seconds: 1),
           height: 30,
           width: 70,
           padding: 2,

@@ -16,12 +16,13 @@ class InputNameWidget extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              height: Get.height* 0.06,
+              height: Get.height* 0.055,
               decoration: BoxDecoration(
                 color: AppColor.textFillColor,
                 borderRadius: BorderRadius.circular(05)
               ),
               child: TextFormField(
+                textDirection: TextDirection.rtl,
                 decoration: InputDecoration(
                     hintText: '',
                     border: OutlineInputBorder(),
@@ -31,7 +32,8 @@ class InputNameWidget extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: 75,),
+          // SizedBox(width: 75,),
+          SizedBox(width: Get.width* 0.2),
           textWidget('نام', 36, AppColor.textColorLight),
         ],
       ),

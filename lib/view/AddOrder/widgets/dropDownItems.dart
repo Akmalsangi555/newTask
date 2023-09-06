@@ -22,18 +22,19 @@ class DropdownWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: Get.height* 0.0),
-      child: Row(
-        children: [
-          Expanded(
-            child: Obx(() => Container(
-              height: Get.height* 0.06,
-              decoration: BoxDecoration(
-                  color: AppColor.textFillColor,
-                  borderRadius: BorderRadius.circular(05)
-              ),
-              child: DropdownButtonHideUnderline (
+    return Row(
+      children: [
+        Expanded(
+          child: Obx(() => Container(
+            height: Get.height* 0.055,
+            // width: Get.width* 0.3,
+            decoration: BoxDecoration(
+                color: AppColor.textFillColor,
+                borderRadius: BorderRadius.circular(05)
+            ),
+            child: Directionality(
+              textDirection: TextDirection.rtl,
+              child: DropdownButtonHideUnderline(
                 child: DropdownButton(
                   icon: Align(
                       alignment: Alignment.centerLeft,
@@ -42,18 +43,20 @@ class DropdownWidget extends StatelessWidget {
                   onChanged: (newValue) {
                     controller.selectedItem.value = newValue!;
                   },
+                  dropdownColor: AppColor.bgColor,
+                  // style: TextStyle(color: AppColor.textColorLight),
                   items: controller.items.map((item) => DropdownMenuItem(
                     value: item,
-                    child: Text(''),
+                    child: Text(item),
                   )).toList(),
                 ),
               ),
-            )),
-          ),
-          SizedBox(width: 65),
-          textWidget('تک', 40, AppColor.textColorLight),
-        ],
-      ),
+            ),
+          )),
+        ),
+        SizedBox(width: Get.width* 0.18),
+        textWidget('تک', 40, AppColor.textColorLight),
+      ],
     );
   }
 }

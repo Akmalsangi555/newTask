@@ -17,8 +17,8 @@ class CustomCheckbox extends StatelessWidget {
             print('isChecked ${controller.isChecked.value}');
           },
           child: Obx(() => Container(
-            width: 50.0, // Set the desired width
-            height: 50.0, // Set the desired height
+            width: Get.width* 0.1, // Set the desired width
+            height: Get.height* 0.045, // Set the desired height
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(05),
               border: Border.all(
@@ -27,10 +27,8 @@ class CustomCheckbox extends StatelessWidget {
               ),
               color: controller.isChecked.value ? AppColor.textFillColor : Colors.transparent,
             ),
-            child: Center(
-              child: controller.isChecked.value
-                  ? Icon(Icons.check, size: 40.0, color: AppColor.bgColor) : null,
-            ),
+            child: controller.isChecked.value
+                ? Icon(Icons.check, size: 30.0, color: AppColor.bgColor) : null,
           ),)
         ),
       ],

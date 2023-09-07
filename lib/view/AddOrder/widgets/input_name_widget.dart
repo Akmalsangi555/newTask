@@ -16,7 +16,7 @@ class InputNameWidget extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              height: Get.height* 0.055,
+              height: Get.height* 0.05,
               decoration: BoxDecoration(
                 color: AppColor.textFillColor,
                 borderRadius: BorderRadius.circular(05)

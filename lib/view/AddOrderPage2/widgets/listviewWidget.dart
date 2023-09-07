@@ -8,7 +8,8 @@ final ListController controller = Get.put(ListController());
 
 listViewItemsWidget() {
   return Container(
-    height: Get.height * 0.8,
+    height: Get.height * 0.65,
+    // color: Colors.red,
     child: ListView.builder(
       physics: NeverScrollableScrollPhysics(),
       itemCount: controller.dataList.length,
@@ -17,20 +18,20 @@ listViewItemsWidget() {
 
         return Padding(
           padding: EdgeInsets.symmetric(
-              vertical: Get.height * 0.01,
+              vertical: Get.height * 0.004,
               horizontal: Get.width * 0.01),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image.asset(data.itemIcon1),
               Container(
-                height: Get.height* 0.06,
+                height: Get.height* 0.05,
                 width: Get.width* 0.7,
                 decoration: BoxDecoration(
                   color: AppColor.textBgColor,
                   borderRadius: BorderRadius.circular(05)
                 ),
-                child: Center(child: textWidget(data.itemTitle, 28, AppColor.whiteColor)),
+                child: Center(child: textWidget(data.itemTitle, 20, AppColor.whiteColor)),
               ),
 
               Image.asset(data.itemIcon2),

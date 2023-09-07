@@ -11,13 +11,13 @@ class InputPhoneWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: Get.height* 0.01),
+      padding: EdgeInsets.symmetric(vertical: Get.height* 0.00),
       child: Row(
         // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
             child: Container(
-              height: Get.height* 0.055,
+              height: Get.height* 0.05,
               decoration: BoxDecoration(
                 color: AppColor.textFillColor,
                 borderRadius: BorderRadius.circular(05)

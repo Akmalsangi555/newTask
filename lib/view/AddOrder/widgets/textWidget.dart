@@ -13,7 +13,7 @@ addedItemsText(String text, double textFontSize, Color textColor){
   return Padding(
     padding: EdgeInsets.only(right: Get.width* 0.05),
     child: Container(
-      height: Get.height* 0.15,
+      height: Get.height* 0.12,
       width: Get.width* 0.75,
       decoration: BoxDecoration(
         color: AppColor.imageBgColor,

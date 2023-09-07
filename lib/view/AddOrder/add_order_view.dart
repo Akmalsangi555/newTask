@@ -50,7 +50,7 @@ class _AddOrderViewState extends State<AddOrderView> {
                       ],
                     ),
                     Divider(color: AppColor.textColorLight, thickness: 2,),
-                    SizedBox(height: Get.height* 0.02),
+                    // SizedBox(height: Get.height* 0.005),
                     InputNameWidget(),
                     InputPhoneWidget(),
                     DropdownWidget(),
@@ -63,14 +63,14 @@ class _AddOrderViewState extends State<AddOrderView> {
                         width: 220,
                         buttonColor: AppColor.whiteColor,
                         textColor: AppColor.bgColor,
-                        textSize: 28,
+                        textSize: 25,
                         onPressed: () {
                           print('clicked');
                           Get.toNamed(RouteName.addOrderScreen2);
                         }
                     ),
 
-                    SizedBox(height: Get.height* 0.01),
+                    SizedBox(height: Get.height* 0.005),
 
                     Row(
                       children: <Widget>[
@@ -97,22 +97,18 @@ class _AddOrderViewState extends State<AddOrderView> {
                             ),
                           ),
                         ),
-                        // Container(),
-                        // SizedBox(width: 70),
-
                       ],
                     ),
                     SizedBox(height: Get.height* 0.01),
 
-                    addedItemsText('سامان , فریج ۔ اےسی ۔ ٹیبل  \n  کرسی 4', 26, AppColor.whiteColor),
+                    addedItemsText('سامان , فریج ۔ اےسی ۔ ٹیبل  \n  کرسی 4', 25, AppColor.whiteColor),
                     SizedBox(height: Get.height* 0.01),
 
                     ButtonWidget(title: 'آرڈر درج کریں',
                         width: 220,
                         buttonColor: AppColor.whiteColor,
                         textColor: AppColor.bgColor,
-                        textSize: 28,
-                        // textColor: Colors.black,
+                        textSize: 25,
                         onPressed: () {}
                     ),
                     SizedBox(height: Get.height* 0.01),

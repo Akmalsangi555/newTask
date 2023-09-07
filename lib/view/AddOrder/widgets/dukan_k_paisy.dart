@@ -26,7 +26,7 @@ class InputShopWidget extends StatelessWidget {
                     textWidget('گاڑی کی قسم', 36, AppColor.textColorLight),
                     SizedBox(height: MediaQuery.of(context).size.height * 0.005),
                     Obx(() => Container(
-                      height: Get.height* 0.055,
+                      height: Get.height* 0.05,
                       width: Get.width,
                       decoration: BoxDecoration(
                           color: AppColor.textColorLight,
@@ -60,7 +60,7 @@ class InputShopWidget extends StatelessWidget {
                     textWidget(' دکان کے پیسے', 36, AppColor.textColorLight),
                     SizedBox(height: MediaQuery.of(context).size.height * 0.005),
                     Container(
-                      height: Get.height* 0.055,
+                      height: Get.height* 0.05,
                       decoration: BoxDecoration(
                           color: AppColor.textColorLight,
                           borderRadius: BorderRadius.circular(05)
@@ -81,13 +81,13 @@ class InputShopWidget extends StatelessWidget {
 
             ],
           ),
-          SizedBox(height: Get.height* 0.02),
+          SizedBox(height: Get.height* 0.01),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(
                 child: Obx(() => Container(
-                  height: Get.height* 0.055,
+                  height: Get.height* 0.05,
                   width: Get.width,
                   decoration: BoxDecoration(
                       color: AppColor.textColorLight,

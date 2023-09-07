@@ -26,7 +26,7 @@ class DropdownWidget extends StatelessWidget {
       children: [
         Expanded(
           child: Obx(() => Container(
-            height: Get.height* 0.055,
+            height: Get.height* 0.05,
             // width: Get.width* 0.3,
             decoration: BoxDecoration(
                 color: AppColor.textFillColor,
